@@ -1,15 +1,26 @@
 {
   "name": "crypto-trading-website",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "package-name": "^0.1.0"
-  }
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0",
+    "recharts": "^2.10.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8"
+  },
+  "description": "Advanced cryptocurrency trading platform with real-time signals, portfolio tracking, and trading plans.",
+  "keywords": ["crypto", "trading", "react", "vite", "portfolio", "signals"],
+  "author": "Crypto Trading Platform"
 }
