@@ -1,79 +1,13 @@
-# Update index.html
-cat > index.html << 'EOF'
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/crypto-icon.svg" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/crypto-icon.svg" />
-    <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Modern cryptocurrency trading platform inspired by Grab/Gojek super app design">
-    <meta name="keywords" content="crypto, trading, bitcoin, ethereum, cryptocurrency, investment">
-    <meta name="author" content="CryptoGo Team">
-    <meta property="og:title" content="CryptoGo | Trading Super App">
-    <meta property="og:description" content="Trade cryptocurrencies easily with our super app platform">
-    <meta property="og:image" content="https://zelineproject.github.io/crypto-trading-website/crypto-icon.svg">
-    <meta property="og:url" content="https://zelineproject.github.io/crypto-trading-website">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>CryptoGo | Trading Super App</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS untuk styling cepat (bisa dipindah ke index.css nanti) -->
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { 
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-        min-height: 100vh;
-      }
-      .loading {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        flex-direction: column;
-        gap: 20px;
-      }
-      .loader {
-        width: 50px;
-        height: 50px;
-        border: 5px solid #e5e7eb;
-        border-top: 5px solid #00B14F;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-    </style>
+    <title>Crypto Trading | Professional Platform</title>
   </head>
   <body>
-    <!-- Loading screen sebelum React mount -->
-    <div id="loading" class="loading">
-      <div class="loader"></div>
-      <div style="color: #4b5563; font-weight: 500;">Loading CryptoGo...</div>
-    </div>
-    
-    <!-- Root untuk React -->
     <div id="root"></div>
-    
-    <!-- Hide loading screen setelah React load -->
-    <script>
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          document.getElementById('loading').style.display = 'none';
-        }, 500);
-      });
-    </script>
-    
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
-EOF
